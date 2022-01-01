@@ -67,6 +67,7 @@ public class AsyncToSyncInvoker<T> implements Invoker<T> {
         } catch (Throwable e) {
             throw new RpcException(e.getMessage(), e);
         }
+        System.out.println(Thread.currentThread().getName() + "继续执行...");
         return asyncResult;
     }
 
