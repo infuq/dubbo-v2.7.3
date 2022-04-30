@@ -112,9 +112,8 @@ public class GenericImplFilter extends ListenableFilter {
                     }
                 }
             }
-
-            invocation.setAttachment(
-                    GENERIC_KEY, invoker.getUrl().getParameter(GENERIC_KEY));
+            // 向attachments中添加"generic"->"true"
+            invocation.setAttachment(GENERIC_KEY, invoker.getUrl().getParameter(GENERIC_KEY));
         }
         return invoker.invoke(invocation);
     }

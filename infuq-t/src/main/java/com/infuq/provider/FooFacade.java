@@ -1,6 +1,6 @@
 package com.infuq.provider;
 
-public interface BookFacade {
+public interface FooFacade {
 
 
     String query(String bookName);

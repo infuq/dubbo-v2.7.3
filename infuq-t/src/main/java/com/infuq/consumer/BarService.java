@@ -1,6 +1,6 @@
 package com.infuq.consumer;
 
-public interface QueryBookService {
+public interface BarService {
 
     String query(String bookName);
 }

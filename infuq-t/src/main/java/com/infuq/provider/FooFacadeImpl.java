@@ -3,8 +3,8 @@ package com.infuq.provider;
 
 import org.apache.dubbo.config.annotation.Service;
 
-@Service(timeout = 5000, version = "1.0", group = "infuq-t")
-public class BookFacadeImpl implements BookFacade {
+@Service(timeout = 5000, version = "1.0.0", group = "infuq-t")
+public class FooFacadeImpl implements FooFacade {
 
 
     @Override
