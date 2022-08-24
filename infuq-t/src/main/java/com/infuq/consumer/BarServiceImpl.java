@@ -1,6 +1,7 @@
 package com.infuq.consumer;
 
 
+import com.infuq.provider.Computer;
 import com.infuq.provider.FooFacade;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.BeansException;
@@ -13,7 +14,7 @@ public class BarServiceImpl implements BarService, ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    @Reference(version = "1.0", group = "infuq-t", retries = 0, timeout = 50000)
+    @Reference(version = "1.0.0", group = "infuq-t", retries = 0, timeout = 50000)
     private FooFacade foofacade;
 
 
@@ -24,6 +25,10 @@ public class BarServiceImpl implements BarService, ApplicationContextAware {
 
     }
 
+    @Override
+    public Computer listComputer() {
+        return foofacade.listComputer();
+    }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

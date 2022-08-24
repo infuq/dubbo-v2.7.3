@@ -15,5 +15,8 @@ public class FooFacadeImpl implements FooFacade {
         return "success: " + bookName;
     }
 
-
+    @Override
+    public Computer listComputer() {
+        return new Computer();
+    }
 }

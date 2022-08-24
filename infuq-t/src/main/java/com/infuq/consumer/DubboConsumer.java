@@ -14,11 +14,17 @@ public class DubboConsumer {
     public static void main(String[] args) throws Exception {
 
 
-//        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-//        BarService service = applicationContext.getBean(BarService.class);
-//        System.out.println(service.query("Java"));
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        BarService service = applicationContext.getBean(BarService.class);
+        System.out.println(service.query("Java"));
 
+        System.out.println(service.query("C++"));
 
+        System.out.println(service.listComputer());
+
+        System.out.println("pause");
+
+/*
         ReferenceConfig<GenericService> reference = new ReferenceConfig<GenericService>();
         reference.setApplication(new ApplicationConfig("infuq-dubbo-consumer"));
         reference.setRegistry(new RegistryConfig("zookeeper://zk.infuq.com:2181"));
@@ -29,7 +35,7 @@ public class DubboConsumer {
         GenericService bean = reference.get();
         Object res = bean.$invoke("query", new String[] {"java.lang.String"}, new Object[] {"Java"});
         System.out.println(res);
-
+*/
 
 
 

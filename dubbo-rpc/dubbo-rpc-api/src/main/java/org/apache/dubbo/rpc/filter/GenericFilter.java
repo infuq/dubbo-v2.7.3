@@ -61,6 +61,7 @@ public class GenericFilter extends ListenableFilter {
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation inv) throws RpcException {
+        // 如果消费端使用泛化调用进行接口调用
         if ((inv.getMethodName().equals($INVOKE) || inv.getMethodName().equals($INVOKE_ASYNC))
                 && inv.getArguments() != null
                 && inv.getArguments().length == 3
@@ -138,6 +139,7 @@ public class GenericFilter extends ListenableFilter {
                                         args[0].getClass().getName());
                     }
                 }
+                // 构建新的invocation参数向下传递
                 return invoker.invoke(new RpcInvocation(method, args, inv.getAttachments()));
             } catch (NoSuchMethodException e) {
                 throw new RpcException(e.getMessage(), e);

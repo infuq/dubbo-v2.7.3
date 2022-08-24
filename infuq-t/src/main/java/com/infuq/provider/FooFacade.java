@@ -5,5 +5,6 @@ public interface FooFacade {
 
     String query(String bookName);
 
+    Computer listComputer();
 
 }

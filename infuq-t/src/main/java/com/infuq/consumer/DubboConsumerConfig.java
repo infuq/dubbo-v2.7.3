@@ -50,8 +50,8 @@ public class DubboConsumerConfig {
         ProtocolConfig protocolConfig = new ProtocolConfig();
         protocolConfig.setName("dubbo");
         protocolConfig.setPort(20880);
-        protocolConfig.setThreads(200);
-        protocolConfig.setThreadpool("cached");
+        protocolConfig.setThreads(1);
+        protocolConfig.setThreadpool("fixed");
         return protocolConfig;
     }
 
