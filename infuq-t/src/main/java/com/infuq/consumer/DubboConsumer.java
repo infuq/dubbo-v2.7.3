@@ -17,12 +17,12 @@ public class DubboConsumer {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         BarService service = applicationContext.getBean(BarService.class);
         System.out.println(service.query("Java"));
+//
+//        System.out.println(service.listComputer());
+
+        System.in.read();
 
         System.out.println(service.query("C++"));
-
-        System.out.println(service.listComputer());
-
-        System.out.println("pause");
 
 /*
         ReferenceConfig<GenericService> reference = new ReferenceConfig<GenericService>();

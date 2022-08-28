@@ -14,7 +14,7 @@ public class BarServiceImpl implements BarService, ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    @Reference(version = "1.0.0", group = "infuq-t", retries = 0, timeout = 50000)
+    @Reference(version = "1.0.0", group = "infuq-t", retries = 0, timeout = 50000, check = false)
     private FooFacade foofacade;
 
 

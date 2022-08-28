@@ -78,6 +78,7 @@ public class NettyServerHandler extends ChannelDuplexHandler {
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("时间戳:" + System.currentTimeMillis() + ", 线程" + Thread.currentThread().getName() + "执行NettyServerHandler#channelInactive");
         NettyChannel channel = NettyChannel.getOrAddChannel(ctx.channel(), url, handler);
         try {
             channels.remove(NetUtils.toAddressString((InetSocketAddress) ctx.channel().remoteAddress()));

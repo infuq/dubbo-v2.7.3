@@ -45,15 +45,15 @@ public class DubboConsumerConfig {
      *
      * @return ProtocolConfig
      */
-    @Bean
-    public ProtocolConfig protocolConfig() {
-        ProtocolConfig protocolConfig = new ProtocolConfig();
-        protocolConfig.setName("dubbo");
-        protocolConfig.setPort(20880);
-        protocolConfig.setThreads(1);
-        protocolConfig.setThreadpool("fixed");
-        return protocolConfig;
-    }
+//    @Bean
+//    public ProtocolConfig protocolConfig() {
+//        ProtocolConfig protocolConfig = new ProtocolConfig();
+//        protocolConfig.setName("dubbo");
+//        protocolConfig.setPort(20880);
+//        protocolConfig.setThreads(1);
+//        protocolConfig.setThreadpool("fixed");
+//        return protocolConfig;
+//    }
 
 
 
