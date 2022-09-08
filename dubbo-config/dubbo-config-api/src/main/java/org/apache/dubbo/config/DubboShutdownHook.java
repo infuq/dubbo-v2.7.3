@@ -54,6 +54,7 @@ public class DubboShutdownHook extends Thread {
 
     @Override
     public void run() {
+        System.out.println("DubboShutdownHook钩子方法");
         if (logger.isInfoEnabled()) {
             logger.info("Run shutdown hook now.");
         }
