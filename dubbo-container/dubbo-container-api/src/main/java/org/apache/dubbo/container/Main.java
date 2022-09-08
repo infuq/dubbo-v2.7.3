@@ -68,6 +68,7 @@ public class Main {
                 Runtime.getRuntime().addShutdownHook(new Thread("dubbo-container-shutdown-hook") {
                     @Override
                     public void run() {
+                        System.out.println("钩子方法");
                         for (Container container : containers) {
                             try {
                                 container.stop();
