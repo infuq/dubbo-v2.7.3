@@ -35,7 +35,7 @@ public class DubboProviderConfig {
     public RegistryConfig registryConfig() {
         RegistryConfig registryConfig = new RegistryConfig();
 //        registryConfig.setAddress("zk.infuq.com:2181");
-        registryConfig.setAddress("192.168.0.107:2181");
+        registryConfig.setAddress("127.0.0.1:2181");
         registryConfig.setProtocol("zookeeper");
 //        registryConfig.setDynamic(true);
         registryConfig.setCheck(true);

@@ -20,7 +20,7 @@ public class DubboConsumer {
 //
 //        System.out.println(service.listComputer());
 
-        System.in.read();
+//        System.in.read();
 
         System.out.println(service.query("C++"));
 
